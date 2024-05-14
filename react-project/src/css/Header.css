@@ -1,0 +1,56 @@
+.logo {
+    height: 20em; /* Establece la altura de los elementos con la clase "logo" */
+    padding: 1.5em; /* Agrega relleno alrededor de los elementos */
+    will-change: filter; /* Indica al navegador que la propiedad "filter" cambiará */
+    transition: filter 300ms; /* Establece la transición para la propiedad "filter" */
+  }
+  
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa); /* Aplica un efecto de sombra al hacer hover */
+  }
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg); /* Define la transformación inicial para la animación */
+    }
+    to {
+      transform: rotate(360deg); /* Define la transformación final para la animación */
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear; /* Aplica la animación de giro a ciertos elementos cuando no hay preferencia de reducción de movimiento */
+    }
+  }
+  
+  header {
+    text-align: center; /* Alinea el texto y los elementos hijos al centro */
+    margin: 3rem 0; /* Establece el margen superior e inferior del elemento */
+  }
+  
+  header img {
+    height: 5rem; /* Establece la altura de las imágenes dentro del encabezado */
+    object-fit: cover; /* Escala la imagen para que cubra el contenedor */
+  }
+  
+  header h2 {
+    margin: 0; /* Elimina el margen predeterminado del encabezado */
+    background: linear-gradient(40deg, #ea00ff, #ea00ff, #03d5ff, #03d5ff); /* Aplica un degradado de fondo al título */
+    background-clip: text; /* Establece el degradado como relleno del texto */
+    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente */
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5)); /* Agrega una sombra al texto */
+  }
+  
+  header p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: 1.25rem; /* Establece el tamaño de fuente del párrafo */
+    color: #8964b0; /* Establece el color del texto */
+  }
+  
+  main {
+    width: 90%; /* Establece el ancho del elemento al 90% del contenedor padre */
+    max-width: 50rem; /* Establece el ancho máximo del elemento */
+    margin: auto; /* Centra el elemento horizontalmente */
+  }
+  
