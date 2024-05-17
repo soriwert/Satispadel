@@ -10,7 +10,7 @@ export default function Cards({ data }) {
       <div className="core-concepts-content">
         <ul>
           {data.map((dato) => (
-            <Card key={dato.title} {...dato} />
+            <Card key={dato.id} {...dato} />
           ))}
         </ul>
       </div>
@@ -18,6 +18,7 @@ export default function Cards({ data }) {
   );
 }
 
+
 Cards.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
 };

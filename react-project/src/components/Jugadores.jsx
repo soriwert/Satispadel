@@ -1,10 +1,11 @@
-import Cards from "./Cards";
+import Card from "./Cards";
 import { JUGADORES } from "../js/jugadores";
+import Header from "./Header";
 
 export default function Jugadores(){
     return (<>
-        <a>HOLAAA</a>
-        <Cards data={ JUGADORES }></Cards>
+        <Header/>
+        <Card data={ JUGADORES }></Card>
     </>
     );
 }
