@@ -16,76 +16,92 @@ function Write() {
   function agregarDato(){ 
     const jugador = collection(db, "JUGADOR")
     const newJugador = {
-      Image: "prueba",
-      Title: "prueba",
-      Description: "prueba",
-      Nombre: "prueba",
-      NombreEspalda: "prueba",
-      ManoDominante: "prueba",
-      Actitud: "prueba",
-      Pala: "prueba",
-      Winner: "prueba",
+      Image: Image,
+      Title: Title,
+      Description: Description,
+      Nombre: Nombre,
+      NombreEspalda: NombreEspalda,
+      ManoDominante: ManoDominante,
+      Actitud: Actitud,
+      Pala: Pala,
+      Winner: Winner
     }
     addDoc(jugador, newJugador)
   }
-  
-  
   return (
     <div>
+      <label htmlFor="Image">Image: </label>
       <input
         type="text"
         placeholder="Image"
         value={Image}
         onChange={(e) => setImage(e.target.value)}
       />
+      <br/>
+      <label htmlFor="Title">Title: </label>
       <input
         type="text"
         placeholder="Title"
         value={Title}
         onChange={(e) => setTitle(e.target.value)}
       />
+      <br/>
+      <label htmlFor="Description">Description: </label>
       <input
         type="text"
         placeholder="Description"
         value={Description}
         onChange={(e) => setDescription(e.target.value)}
       />
+      <br/>
+      <label htmlFor="Nombre">Nombre: </label>
       <input
         type="text"
         placeholder="Nombre"
         value={Nombre}
         onChange={(e) => setNombre(e.target.value)}
       />
+      <br/>
+      <label htmlFor="NombreEspalda">NombreEspalda: </label>
       <input
         type="text"
         placeholder="NombreEspalda"
         value={NombreEspalda}
         onChange={(e) => setNombreEspalda(e.target.value)}
       />
+      <br/>
+      <label htmlFor="ManoDominante">ManoDominante: </label>
       <input
         type="text"
         placeholder="ManoDominante"
         value={ManoDominante}
         onChange={(e) => setManoDominante(e.target.value)}
       />
+      <br/>
+      <label htmlFor="Actitud">Actitud: </label>
       <input
         type="text"
         placeholder="Actitud"
         value={Actitud}
         onChange={(e) => setActitud(e.target.value)}
       />
+      <br/>
+      <label htmlFor="Pala">Pala: </label>
       <input
         type="text"
         placeholder="Pala"
         value={Pala}
         onChange={(e) => setPala(e.target.value)}
       />
+      <br/>
+      <label htmlFor="Winner">Winner: </label>
       <input
         type="text"
         placeholder="Winner"
         value={Winner}
         onChange={(e) => setWinner(e.target.value)}
       />
+      <br/>
       <button onClick={agregarDato}>Agregar</button>
     </div>
   );

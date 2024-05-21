@@ -1,17 +1,16 @@
 import Header from "./Header";
 import Cards from "./Cards";
-import { CORE_CONCEPTS } from "../js/data.js";
-import Write from "../bbdd/write.jsx";
+import { OPCIONES } from "../js/menu.js";
 
 
 export default function Inicio() {
+  
   return (
     <div>
       <Header/>
       <main>
-        <Cards data={CORE_CONCEPTS} />
+        <Cards data={OPCIONES} />
       </main>
-      <Write/>
     </div>
   );
 }

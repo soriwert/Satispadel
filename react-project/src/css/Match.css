@@ -1,0 +1,7 @@
+.selected-day {
+  border: 2px solid blue;
+}
+
+.selected-hour {
+  background-color: lightblue;
+}

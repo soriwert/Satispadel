@@ -1,0 +1,21 @@
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(9, 0, 128);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+.info {
+    margin: 20px 0;
+}
+.info p {
+    margin: 10px 0;
+}
+.info label {
+    font-weight: bold;
+}
