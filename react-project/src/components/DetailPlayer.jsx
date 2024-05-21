@@ -1,16 +1,50 @@
 import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
+import "../css/DetailPlayer.css";
 function DetailPlayer(props) {
-  const { jugador } = props;
+  const { jugadores } = props;
   const { id } = useParams();
 
-  const jugadorElegido = jugador.find(jugador => jugador.id === parseInt(id));
-
+  const jugadorElegido = jugadores.find(
+    (jugador) => jugador.id === parseInt(id)
+  );
   return (
-    <div>
-      <img src="./assets/FotoPerfil/1.png" alt={props.alt}/>
-      <h2>{jugadorElegido.nombre}</h2>
-      <p>{jugadorElegido.description}</p>
+    <div className="container">
+      <h1>Detalle de Jugador</h1>
+      <div className="info">
+        <img src={jugadorElegido.image} alt={props.alt} />
+        <h2>
+          <label>Nombre: </label> {jugadorElegido.nombre}
+        </h2>
+        <p>
+          <label>Edad: </label>
+          {jugadorElegido.edad}
+        </p>
+        <p>
+          <label>description: </label>
+          {jugadorElegido.description}
+        </p>
+        <p>
+          <label>nombreEspalda: </label>
+          {jugadorElegido.nombreEspalda}
+        </p>
+        <p>
+          <label>ManoDominante: </label>
+          {jugadorElegido.ManoDominante}
+        </p>
+        <p>
+          <label>actitud: </label>
+          {jugadorElegido.actitud}
+        </p>
+        <p>
+          <label>pala: </label>
+          {jugadorElegido.pala}
+        </p>
+        <p>
+          <label>winner: </label>
+          {jugadorElegido.winner}
+        </p>
+      </div>
     </div>
   );
 }
@@ -18,7 +52,7 @@ function DetailPlayer(props) {
 export default DetailPlayer;
 
 DetailPlayer.propTypes = {
-    jugador: PropTypes.array,
-    image: PropTypes.string,
-    alt: PropTypes.string
-  };
+  jugadores: PropTypes.array,
+  image: PropTypes.string,
+  alt: PropTypes.string,
+};

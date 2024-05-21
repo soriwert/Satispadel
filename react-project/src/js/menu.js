@@ -2,8 +2,9 @@ import jugador from "../assets/jugador.png";
 import pelota from "../assets/pelota.png";
 import calendario from "../assets/calendario.png";
 import torneo from "../assets/torneo.png";
+import registrarse from "../assets/registrarse.png";
 
-export const CORE_CONCEPTS = [
+export const OPCIONES = [
   {
     image: jugador,
     id: "Jugadores",
@@ -13,10 +14,10 @@ export const CORE_CONCEPTS = [
   },
   {
     image: pelota,
-    id: "Partidos",
-    title: "Partidos",
-    description: "Lista de partidos actuales",
-    ruta: "/partidos",
+    id: "Match",
+    title: "Match",
+    description: "Selecciona tus dias y horarios para hacer Match",
+    ruta: "/Match",
   },
   {
     image: calendario,
@@ -32,4 +33,11 @@ export const CORE_CONCEPTS = [
     description: "Futuros torenos, eventos, Americanos, Pozos... etc",
     ruta: "/torneos",
   },
+  {
+    image: registrarse,
+    id: "Registrarse",
+    title: "Registrarse",
+    description: "Registro de jugador, después será a través del login",
+    ruta: "/Registrarse",
+  }
 ];
