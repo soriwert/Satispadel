@@ -1,5 +1,5 @@
-import Header from "./Header";
-import Cards from "./Cards";
+import Header from "./Header.jsx";
+import Cards from "./Cards.jsx";
 import { OPCIONES } from "../js/menu.js";
 
 

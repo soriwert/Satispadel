@@ -1,4 +1,4 @@
-import '../css/Match.css'
+import '../../css/match/Match.css'
 
 function HourButton({ hour, isSelected, onSelect }) {
   return (

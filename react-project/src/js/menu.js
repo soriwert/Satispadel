@@ -1,4 +1,4 @@
-import jugador from "../assets/jugador.png";
+import jugador from "../assets/jugadores/jugador.png";
 import pelota from "../assets/pelota.png";
 import calendario from "../assets/calendario.png";
 import torneo from "../assets/torneo.png";

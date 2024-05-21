@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
-import "../css/DetailPlayer.css";
+import "../../css/jugadores/DetailPlayer.css";
+
 function DetailPlayer(props) {
   const { jugadores } = props;
   const { id } = useParams();

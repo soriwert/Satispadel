@@ -1,7 +1,7 @@
 import logo from "../assets/logo.png";
 import "../css/Header.css";
-import Previous from "./Previous.jsx";
-import Next from "./Next.jsx";
+import Previous from "./utils/Previous.jsx";
+import Next from "./utils/Next.jsx";
 
 export default function Header() {
   return (

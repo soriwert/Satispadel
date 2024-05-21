@@ -1,10 +1,10 @@
 import Inicio from './components/Inicio';
-import Jugadores from './components/Jugadores';
-import Match from './components/Match';
-import Calendario from './components/Calendario';
-import Torneos from './components/Torneos';
-import DetailPlayer from './components/DetailPlayer';
-import { JUGADORES } from './js/jugadores';
+import Jugadores from './components/jugadores/Jugadores';
+import Match from './components/match/Match';
+import Calendario from './components/calendario/Calendario';
+import Torneos from './components/torneos/Torneos';
+import DetailPlayer from './components/jugadores/DetailPlayer';
+import { JUGADORES } from './js/jugadores/jugadores';
 import Write from './bbdd/Write';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
