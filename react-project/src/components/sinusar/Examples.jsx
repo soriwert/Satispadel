@@ -1,5 +1,5 @@
-import DataPlayer from "../components/DataPlayer.jsx";
-import TabButton from "../components/TabButton.jsx";
+import DataPlayer from "../jugadores/DataPlayer.jsx";
+import TabButton from "./TabButton.jsx";
 import { useState } from "react";
 import Section from "./Section.jsx";
 import Tabs from "./Tabs.jsx";

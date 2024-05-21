@@ -2,7 +2,7 @@ export const JUGADORES = [
   {
     id: 0,
     ruta: "/jugadores/0",
-    image: "/src/assets/FotoPerfil/1.png",
+    image: "/src/assets/jugadores/FotoPerfil/1.png",
     title: "",
     description: "BEST OF THE BEST",
     nombre: "Patricio",
@@ -16,7 +16,7 @@ export const JUGADORES = [
   {
     id: 1,
     ruta: "/jugadores/1",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Carlos",
@@ -30,7 +30,7 @@ export const JUGADORES = [
   {
     id: 2,
     ruta: "/jugadores/2",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Luisa",
@@ -44,7 +44,7 @@ export const JUGADORES = [
   {
     id: 3,
     ruta: "/jugadores/3",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Sofía",
@@ -58,7 +58,7 @@ export const JUGADORES = [
   {
     id: 4,
     ruta: "/jugadores/4",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Miguel",
@@ -72,7 +72,7 @@ export const JUGADORES = [
   {
     id: 5,
     ruta: "/jugadores/5",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Ana",
@@ -86,7 +86,7 @@ export const JUGADORES = [
   {
     id: 6,
     ruta: "/jugadores/6",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Diego",
@@ -100,7 +100,7 @@ export const JUGADORES = [
   {
     id: 7,
     ruta: "/jugadores/7",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Elena",
@@ -114,7 +114,7 @@ export const JUGADORES = [
   {
     id: 8,
     ruta: "/jugadores/8",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Mario",
@@ -128,7 +128,7 @@ export const JUGADORES = [
   {
     id: 9,
     ruta: "/jugadores/9",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Laura",
@@ -142,7 +142,7 @@ export const JUGADORES = [
   {
     id: 10,
     ruta: "/jugadores/10",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Javier",
@@ -156,7 +156,7 @@ export const JUGADORES = [
   {
     id: 11,
     ruta: "/jugadores/11",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "María",
@@ -170,7 +170,7 @@ export const JUGADORES = [
   {
     id: 12,
     ruta: "/jugadores/12",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Andrés",
@@ -184,7 +184,7 @@ export const JUGADORES = [
   {
     id: 13,
     ruta: "/jugadores/13",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Paula",
@@ -198,7 +198,7 @@ export const JUGADORES = [
   {
     id: 14,
     ruta: "/jugadores/14",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Roberto",
@@ -212,7 +212,7 @@ export const JUGADORES = [
   {
     id: 15,
     ruta: "/jugadores/15",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Isabel",
@@ -226,7 +226,7 @@ export const JUGADORES = [
   {
     id: 16,
     ruta: "/jugadores/16",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Hugo",
@@ -240,7 +240,7 @@ export const JUGADORES = [
   {
     id: 17,
     ruta: "/jugadores/17",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Sara",
@@ -254,7 +254,7 @@ export const JUGADORES = [
   {
     id: 18,
     ruta: "/jugadores/18",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Alejandro",
@@ -268,7 +268,7 @@ export const JUGADORES = [
   {
     id: 19,
     ruta: "/jugadores/19",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Carmen",
@@ -282,7 +282,7 @@ export const JUGADORES = [
   {
     id: 20,
     ruta: "/jugadores/20",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Pablo",
@@ -296,7 +296,7 @@ export const JUGADORES = [
   {
     id: 21,
     ruta: "/jugadores/21",
-    image: "/src/assets/jugador.png",
+    image: "/src/assets/jugadores/jugador.png",
     title: "",
     description: "",
     nombre: "Lucía",
