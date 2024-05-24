@@ -1,0 +1,11 @@
+div.loginContainer {
+    width: 100%;
+}
+div.buttonContainer{
+    align-items: center;
+    width: 100%;
+}
+
+img.logoGoogle{
+    width: 25%;
+}
