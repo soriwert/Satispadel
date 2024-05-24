@@ -1,5 +1,5 @@
 .logo {
-    height: 20em; /* Establece la altura de los elementos con la clase "logo" */
+    height: 7em; /* Establece la altura de los elementos con la clase "logo" */
     padding: 1.5em; /* Agrega relleno alrededor de los elementos */
     will-change: filter; /* Indica al navegador que la propiedad "filter" cambiará */
     transition: filter 300ms; /* Establece la transición para la propiedad "filter" */

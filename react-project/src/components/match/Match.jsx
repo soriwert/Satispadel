@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import moment from "moment";
-import 'moment/locale/es';
+import "moment/locale/es";
 import DayButton from "./DayButton";
 import HourButton from "./HourButton";
 
-moment.locale('es');
+moment.locale("es");
 
 function Match() {
   const [selectedDay, setSelectedDay] = useState(null);
-  const [selectedHours, setSelectedHours] = useState([]);
-  const [nextDays, setNextDays] = useState([]);
+  const [selectedSlots, setSelectedSlots] = useState([]);
 
   useEffect(() => {
     const today = moment();
@@ -17,25 +16,40 @@ function Match() {
     for (let i = 0; i < 14; i++) {
       next14Days.push(today.clone().add(i, "days"));
     }
-    setNextDays(next14Days);
+    setSelectedSlots(next14Days.map(day => ({ day, hours: [] })));
   }, []);
 
   function handleDaySelect(day) {
     setSelectedDay(day);
-    setSelectedHours([]);
+    setSelectedSlots(prevSelectedSlots => {
+      const updatedSlots = prevSelectedSlots.map(slot =>
+        slot.day.isSame(day, "day")
+          ? { ...slot, day, hours: slot.hours }
+          : slot
+      );
+      return updatedSlots;
+    });
   }
 
   function handleHourSelect(hour) {
-    setSelectedHours(prevSelectedHours =>
-      prevSelectedHours.includes(hour)
-        ? prevSelectedHours.filter(h => h !== hour)
-        : [...prevSelectedHours, hour]
-    );
+    setSelectedSlots(prevSelectedSlots => {
+      const updatedSlots = prevSelectedSlots.map(slot =>
+        slot.day.isSame(selectedDay, "day")
+          ? {
+              ...slot,
+              hours: slot.hours.includes(hour)
+                ? slot.hours.filter(h => h !== hour)
+                : [...slot.hours, hour]
+            }
+          : slot
+      );
+      return updatedSlots;
+    });
   }
 
   function generateHours() {
     const slots = [];
-    for (let hour = 0; hour < 24; hour++) {
+    for (let hour = 17; hour < 22; hour++) {
       for (let minute = 0; minute < 60; minute += 30) {
         const time = `${String(hour).padStart(2, "0")}:${String(
           minute
@@ -50,13 +64,13 @@ function Match() {
 
   return (
     <div>
-      <p>Selecciona los días de la semana que quieres jugar</p>
+      <p>Selecciona el día de la semana que quieres jugar</p>
       <div className="days-container">
-        {nextDays.map((day, index) => (
+        {selectedSlots.map(({ day }, index) => (
           <DayButton
             key={index}
             day={day}
-            isSelected={selectedDay && day.isSame(selectedDay, "day")}
+            isSelected={day && day.isSame(selectedDay, "day")}
             onSelect={handleDaySelect}
           />
         ))}
@@ -70,13 +84,31 @@ function Match() {
               <HourButton
                 key={index}
                 hour={hour}
-                isSelected={selectedHours.includes(hour)}
-                onSelect={handleHourSelect}
+                isSelected={selectedSlots.find(slot =>
+                  slot.day.isSame(selectedDay, "day")
+                ).hours.includes(hour)}
+                onSelect={() => handleHourSelect(hour)}
               />
             ))}
           </div>
         </div>
       )}
+
+      {selectedSlots.some(({ hours }) => hours.length > 0) && (
+        <button> guardar </button>
+      )}
+
+      <div>
+        <p>log :</p>
+        <p>tus días y horas seleccionadas son:</p>
+        <ul>
+          {selectedSlots.map(({ day, hours }) => (
+            <li key={day}>
+              {day.format("DD/MM")}: {hours.join(", ")}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

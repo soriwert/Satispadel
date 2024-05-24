@@ -32,7 +32,8 @@
 }
 
 #core-concepts li img {
-  height: 9rem; /* Establece la altura de las imágenes */
+  height: 100%; /* Establece la altura de las imágenes */
+  width: 100%;
 }
 
 #core-concepts:hover {
