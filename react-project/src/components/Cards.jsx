@@ -9,15 +9,15 @@ export default function Cards({ data }) {
       </div>
       <div className="core-concepts-content">
         <ul>
-          {data.map((dato) => (
-            <Card key={dato.id} {...dato} />
-          ))}
+          {data.map(
+            (dato) =>
+              <Card key={dato.id} {...dato} />
+          )}
         </ul>
       </div>
     </section>
   );
 }
-
 
 Cards.propTypes = {
   data: PropTypes.array,

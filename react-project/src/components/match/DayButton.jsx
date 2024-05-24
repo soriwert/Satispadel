@@ -1,4 +1,5 @@
 import '../../css/match/Match.css'
+import PropTypes from 'prop-types';
 
 function DayButton({ day, isSelected, onSelect }) {
   return (
@@ -12,3 +13,10 @@ function DayButton({ day, isSelected, onSelect }) {
 }
 
 export default DayButton;
+
+DayButton.propTypes = {
+
+  isSelected: PropTypes.bool,
+  onSelect: PropTypes.func,
+};
+
