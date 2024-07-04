@@ -1,45 +1,44 @@
-
-#core-concepts {
-    padding: 2rem; /* Agrega relleno alrededor del elemento */
-    border-radius: 6px; /* Establece el radio de borde del elemento */
-    background-color: #140524; /* Establece el color de fondo del elemento */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Agrega una sombra al elemento */
-    display: flex; /* Establece el contenedor como un flexbox */
-    flex-direction: column; /* Apila los elementos verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
+.img_Card_Container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 18rem;
 }
-
-#core-concepts h2 {
-    text-align: center; /* Alinea el texto al centro */
-    margin: 0 0 1.5rem 0; /* Establece el margen inferior del título */
-    color: #a18aba; /* Establece el color del texto */
+.imgCard {
+    width: 9rem;
 }
-
-#core-concepts ul {
-    list-style: none; /* Elimina los marcadores de lista */
-    padding: 0; /* Elimina el relleno dentro de la lista */
-    margin: 0; /* Elimina el margen fuera de la lista */
-    display: flex; /* Establece la lista como un flexbox */
-    gap: 2rem; /* Establece el espacio entre los elementos de la lista */
-    justify-content: space-between; /* Distribuye uniformemente los elementos */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
+.title_Card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.description_Card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.nombre_Card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #core-concepts li {
-  flex: 1; /* Hace que cada elemento li ocupe el mismo espacio disponible */
-  max-width: calc(50% - 1rem); /* Define el ancho máximo para que dos elementos se muestren en una fila */
-  text-align: center; /* Alinea el texto al centro */
-}
-
-#core-concepts li img {
-  height: 100%; /* Establece la altura de las imágenes */
-  width: 100%;
-}
-
-#core-concepts:hover {
-  filter: drop-shadow(0 0 2em #646cffaa); /* Aplica un efecto de sombra al hacer hover */
-}
-
-#core-concepts li:hover {
-    filter: drop-shadow(0 0 2em #646cffaa); /* Aplica un efecto de sombra al hacer hover */
-}
+    flex: 1; /* Hace que cada elemento li ocupe el mismo espacio disponible */
+    max-width: calc(50% - 1rem); /* Define el ancho máximo para que dos elementos se muestren en una fila */
+    text-align: center; /* Alinea el texto al centro */
+  }
+ 
