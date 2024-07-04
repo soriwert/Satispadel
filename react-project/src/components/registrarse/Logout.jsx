@@ -1,21 +1,18 @@
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from '../../context/UserContext';
 
-export default function Logout() {
-  const navigateTo = useNavigate();
+const Logout = () => {
+  const { logout } = useContext(UserContext);
 
-  function handleLogout() {
-    sessionStorage.clear();
-    console.log(sessionStorage);
-    navigateTo("/");
-  }
+  const handleLogout = () => {
+    logout();
+  };
+
   return (
-    <>
-      {sessionStorage.user && 
-      (
-        <button onClick={handleLogout}>
-          <img src="src/assets/logout.png" alt="" />
-        </button>
-      )}
-    </>
+    <button onClick={handleLogout}>
+      Logout
+    </button>
   );
-}
+};
+
+export default Logout;
