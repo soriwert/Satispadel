@@ -1,7 +1,10 @@
+import { useEffect } from "react";
 import Card from "./Card.jsx";
 import PropTypes from "prop-types";
 
 export default function Cards({ data }) {
+
+  
   return (
     <section id="core-concepts">
       <div className="section-header">

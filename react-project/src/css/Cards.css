@@ -1,9 +1,7 @@
 
 #core-concepts {
-    padding: 2rem; /* Agrega relleno alrededor del elemento */
+    height: inherit;
     border-radius: 6px; /* Establece el radio de borde del elemento */
-    background-color: #140524; /* Establece el color de fondo del elemento */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Agrega una sombra al elemento */
     display: flex; /* Establece el contenedor como un flexbox */
     flex-direction: column; /* Apila los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */

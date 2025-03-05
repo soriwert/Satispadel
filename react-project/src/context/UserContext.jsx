@@ -17,13 +17,15 @@ const UserProvider = ({ children }) => {
     sessionStorage.setItem('user', JSON.stringify(user));
   };
 
+  const isLogged = user !== null;
+
   const logout = () => {
     setUser(null);
     sessionStorage.removeItem('user');
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout }}>
+    <UserContext.Provider value={{ user, login, logout, isLogged }}>
       {children}
     </UserContext.Provider>
   );

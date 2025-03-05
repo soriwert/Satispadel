@@ -28,6 +28,13 @@ body {
   height: 100%;
 }
 
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto; /* Centra el elemento horizontalmente */
+  text-align: center; /* Alinea el texto y los elementos hijos al centro */
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -60,6 +67,14 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* .container-div{
+  width: 100%;
+  height: 100%;
+}
+.container-main{
+  height: 1159px;
+} */
 
 @media (prefers-color-scheme: light) {
   :root {

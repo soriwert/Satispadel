@@ -4,9 +4,7 @@ import Proptypes from "prop-types"
 const Layout = ({ children }) => (
     <div>
       <Header />
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   );
 

@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
   background-color: #2b0850;
   flex-wrap: wrap;
-  height: 6em;
+  height: 120px;
+  padding: 0.2em 2.3em;
 }
 
 .header__izquierda {

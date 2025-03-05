@@ -18,7 +18,7 @@ export default function Header() {
         </Link>
       </div>
       <div className='header__center'>
-        <h2 className="header__titulo">Bienvenid@ a tu web de pádel</h2>
+        <h2 className="header__titulo">Bienvenid{user ? `@ ${user.displayName}` : "@"} a tu web de pádel</h2>
       </div>
       <div className="header__derecha">
         <Navigate />
