@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Card from "./Card.jsx";
 import PropTypes from "prop-types";
 
@@ -14,7 +13,7 @@ export default function Cards({ data }) {
         <ul>
           {data.map(
             (dato) =>
-              <Card key={dato.id} {...dato} />
+              <Card key={dato.Id} {...dato} />
           )}
         </ul>
       </div>

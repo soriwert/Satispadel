@@ -4,11 +4,16 @@ const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [jugadores, setJugadores] = useState([]);
 
   useEffect(() => {
-    const storedUser = sessionStorage.getItem('user');
+    const storedUser = sessionStorage.getItem('user'); 
+    const storedJugadores = sessionStorage.getItem('jugadores'); 
     if (storedUser) {
       setUser(JSON.parse(storedUser));
+    }
+    if (storedJugadores){
+      setJugadores(JSON.parse(storedJugadores));
     }
   }, []);
 
@@ -25,7 +30,7 @@ const UserProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout, isLogged }}>
+    <UserContext.Provider value={{ user, jugadores, setJugadores, login, logout, isLogged }}>
       {children}
     </UserContext.Provider>
   );

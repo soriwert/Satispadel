@@ -1,28 +1,58 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import app from "../../firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from '../../context/UserContext';
 import "../../css/registrarse/LoginGoogle.css";
+import { db } from "../../firebase/auth";
+import { collection, getDocs, addDoc, query, where } from "firebase/firestore";
 
 const LoginGoogle = () => {
-  const { login } = useContext(UserContext);
+  const { login, jugadores, setJugadores } = useContext(UserContext);
   const provider = new GoogleAuthProvider();
+  provider.addScope("profile");
   const navigateTo = useNavigate();
 
-  const handleLogin = () => {
-    const auth = getAuth(app);
-    signInWithPopup(auth, provider)
-      .then((response) => {
-        console.log(response.user);
-        login(response.user);
-        sessionStorage.setItem("accessToken", JSON.stringify(response.accessToken));
-        console.log(response);
-        navigateTo("/");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  useEffect(() => {
+  }, [jugadores, setJugadores]);
+
+
+
+  async function recuperarJugador(newJugador) {
+    const jugadoresCollection = collection(db, "JUGADORES");
+    const jugadores = await getDocs(jugadoresCollection);
+    const jugadorExistente = query(jugadoresCollection, where("Id", "==", newJugador.Id));
+    
+    if (jugadorExistente) {
+      login(newJugador);
+    } else {
+      await addDoc(jugadoresCollection, newJugador);
+    }
+
+    const jugadoresLista = jugadores.docs.map(doc => doc.data());
+    console.log(jugadoresLista)
+    setJugadores(jugadoresLista);
+  }
+
+  const handleLogin = async () => {
+    try {
+      const auth = getAuth(app);
+      const response = await signInWithPopup(auth, provider);
+
+      const newJugador = {
+        Id: response.user.uid,
+        AccessToken: response.user.accessToken,
+        Name: response.user.displayName,
+        Email: response.user.email,
+        Image: response.user.photoURL
+      };
+
+      await recuperarJugador(newJugador);
+
+      navigateTo("/");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

@@ -32,12 +32,5 @@ export const OPCIONES = [
     title: "Torneos",
     description: "Futuros torenos, eventos, Americanos, Pozos... etc",
     ruta: "/torneos",
-  },
-  {
-    image: registrarse,
-    id: "Registrarse",
-    title: "Registrarse",
-    description: "Registro de jugador, después será a través del login",
-    ruta: "/Registrarse",
   }
 ];

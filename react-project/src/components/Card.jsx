@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 export default function Card(props) {
   return (
-    <li>
+    <li >
       <nav>
         <Link to={props.ruta}>
           <div className="img_Card_Container">
