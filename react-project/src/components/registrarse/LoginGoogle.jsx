@@ -8,13 +8,13 @@ import { db } from "../../firebase/auth";
 import { collection, getDocs, addDoc, query, where } from "firebase/firestore";
 
 const LoginGoogle = () => {
-  const { login, jugadores, setJugadores } = useContext(UserContext);
+  const { login, jugadores, setJugadoresGuardados } = useContext(UserContext);
   const provider = new GoogleAuthProvider();
   provider.addScope("profile");
   const navigateTo = useNavigate();
 
   useEffect(() => {
-  }, [jugadores, setJugadores]);
+  }, [jugadores, setJugadoresGuardados]);
 
 
 
@@ -31,7 +31,7 @@ const LoginGoogle = () => {
 
     const jugadoresLista = jugadores.docs.map(doc => doc.data());
     console.log(jugadoresLista)
-    setJugadores(jugadoresLista);
+    setJugadoresGuardados(jugadoresLista);
   }
 
   const handleLogin = async () => {
